@@ -13,3 +13,6 @@
 2017-07-20T21:55:27.881300040 2.471612s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
 2017-07-20T21:55:27.881308125 2.471620s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
 2017-07-20T21:55:27.881315352 2.471628s notice: Server ready, "KameR_xln" 1dce739d-d0dc-49e2-8ff6-ac1f9a7fb666
+2017-07-21T00:39:09.044649751 9822.691176s info: Table 67b04eb2-5805-4d7e-aa32-3b054011e260: Starting a new Raft election for term 1.
+2017-07-21T00:39:09.044911457 9822.691437s info: Table 67b04eb2-5805-4d7e-aa32-3b054011e260: Added replica on this server.
+2017-07-21T00:39:09.109195985 9822.755722s info: Table 67b04eb2-5805-4d7e-aa32-3b054011e260: This server is Raft leader for term 1. Latest log index is 0.
