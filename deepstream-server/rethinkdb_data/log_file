@@ -1,0 +1,15 @@
+2017-07-20T21:55:25.814077011 0.404391s notice: Recursively removing directory /home/kamer/Documents/project/deepstream-rethinkdb-location-demo/deepstream-server/rethinkdb_data/tmp
+2017-07-20T21:55:25.864808199 0.455121s notice: Initializing directory /home/kamer/Documents/project/deepstream-rethinkdb-location-demo/deepstream-server/rethinkdb_data
+2017-07-20T21:55:25.865035718 0.455348s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/kamer/Documents/project/deepstream-rethinkdb-location-demo/deepstream-server/rethinkdb_data' did not already exist or is empty.)
+2017-07-20T21:55:25.865113489 0.455426s notice: Running rethinkdb 2.3.6~0zesty (GCC 5.4.1)...
+2017-07-20T21:55:25.871809529 0.462124s notice: Running on Linux 4.10.0-26-generic x86_64
+2017-07-20T21:55:25.871882003 0.462194s notice: Loading data from directory /home/kamer/Documents/project/deepstream-rethinkdb-location-demo/deepstream-server/rethinkdb_data
+2017-07-20T21:55:27.876778440 2.467091s info: Automatically using cache size of 1660 MB
+2017-07-20T21:55:27.879678021 2.469991s notice: Listening for intracluster connections on port 29015
+2017-07-20T21:55:27.880772610 2.471085s notice: Listening for client driver connections on port 28015
+2017-07-20T21:55:27.881280523 2.471594s notice: Listening for administrative HTTP connections on port 8080
+2017-07-20T21:55:27.881285719 2.471598s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-07-20T21:55:27.881290709 2.471605s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-07-20T21:55:27.881300040 2.471612s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-07-20T21:55:27.881308125 2.471620s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-20T21:55:27.881315352 2.471628s notice: Server ready, "KameR_xln" 1dce739d-d0dc-49e2-8ff6-ac1f9a7fb666
