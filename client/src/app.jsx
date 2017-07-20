@@ -14,7 +14,11 @@ export default class MapComponent extends React.Component {
       console.log(err)
     });
     this.state = {
-      inputValue: ''
+      inputValue: '',
+      position: {
+        lat: 12,
+        lng: 124
+      }
     };
 
   }
@@ -51,13 +55,34 @@ export default class MapComponent extends React.Component {
     this.callback(true);
   }
 
+  _onGetEntries(users) {
+    let recordNames = this.list.getEntries();
+    this._updateMarkers(recordNames);
+  }
 
+  _updateMarkers(userRecordNames) {
+    for (var i = 0; i < userRecordNames.length; i++) {
+      if (!this.markers[userRecordNames[i]]) {
+        //for each list entry, we create a new marker instance,
+        //where we can subscribe to the record corresponding with the list entry
+        this.markers[userRecordNames[i]] = new Marker(userRecordNames[i], this.map, this.username);
+      }
+    }
+
+    for (var userRecordName in this.markers) {
+      if (userRecordNames.indexOf(userRecordName) === -1) {
+        this.markers[userRecordName].destroy();
+        delete this.markers[userRecordName];
+      }
+    }
+  }
 
   onPositionUpdate(position) {
     this.pos = {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude
+      lat: position.lat,
+      lng: position.lng
     };
+    console.log(this.ds.record)
     this.record.set('position', this.pos);
     //creates the list that contains our latitude and longitude
     this.list = ds.record.getList('users_within_radius/' + this.pos.lat + '/' + this.pos.lng + '/' + 1 + '/' + this.username)
@@ -72,10 +97,10 @@ export default class MapComponent extends React.Component {
     console.log(e);
   }
   onBtnClick() {
-   
+
     // console.log(this.state.inputValue);
-    this.login(this.state.inputValue,this.cb)
-    
+    this.login(this.state.inputValue, this.cb)
+
   }
   updateInputValue = (evt) => {
     this.setState({
@@ -83,15 +108,20 @@ export default class MapComponent extends React.Component {
     });
   }
 
+  fake() {
+    this.onPositionUpdate(this.state.position)
+    console.log(this.state.position)
+  }
   render() {
     // const { movements, agents, prices } = this.state;
 
     return (
       <div>
-        <input type="text" value={ this.state.inputValue } onChange={this.updateInputValue}/>
-        <button onClick={ this.onBtnClick.bind(this) }>
+        <input type="text" value={this.state.inputValue} onChange={this.updateInputValue} />
+        <button onClick={this.onBtnClick.bind(this)}>
           Activate Lasers
         </button>
+        <button onClick={ this.fake.bind(this) }>fake</button>
         <h1>  hi</h1>
       </div>
     );

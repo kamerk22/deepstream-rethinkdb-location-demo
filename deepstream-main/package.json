@@ -1,0 +1,27 @@
+{
+  "name": "deepstream-server",
+  "version": "1.0.0",
+  "description": "Deepstream Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamerk22/deepstream-rethinkdb-location-demo.git"
+  },
+  "keywords": [
+    "deepstream",
+    "realtime"
+  ],
+  "dependencies": {
+    "deepstream.io-client-js": "^2.2.1"
+  },
+  "author": "Kashyap Merai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kamerk22/deepstream-rethinkdb-location-demo/issues"
+  },
+  "homepage": "https://github.com/kamerk22/deepstream-rethinkdb-location-demo#readme"
+}
